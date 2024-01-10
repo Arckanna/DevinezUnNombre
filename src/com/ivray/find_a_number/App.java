@@ -16,15 +16,20 @@ public class App {
 		//Processing part	
 		System.out.println("Welcome ! Please enter a number between 1 and 100");
 		nbToFind = random.nextInt(100) + 1;
-		nbEnter = scanner.nextInt();
 		
-		if (nbEnter > nbToFind) {
-			System.out.println("Smaller");
-		}else if (nbEnter < nbToFind) {
-			System.out.println("Bigger");
-		}else {
-			System.out.println("GG! You win in " + nbTrial + " trial.");
+		while (nbEnter != nbToFind) {
+			nbTrial++;
+			nbEnter = scanner.nextInt();
+			
+			if (nbEnter > nbToFind) {
+				System.out.println("Smaller");
+			}else if (nbEnter < nbToFind) {
+				System.out.println("Bigger");
+			}else {
+				System.out.println("GG! You win in " + nbTrial + " trial.");
+			}
 		}
+		
 		
 	}
 
